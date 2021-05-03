@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Jimmy Song <http://github.com/jimmysong>
+MAINTAINER cryptosig <http://github.com/cryptosig>
 
 # Install LXDE, VNC server, Twisted, SWIG and Qt
 RUN apt-get update \
@@ -8,7 +8,7 @@ RUN apt-get update \
 # Download bitcoin
 RUN mkdir /bitcoin
 WORKDIR /bitcoin
-ENV BITCOIN_VERSION 0.14.1
+ENV BITCOIN_VERSION 0.21.0
 RUN curl -SLO "https://bitcoin.org/bin/bitcoin-core-${BITCOIN_VERSION}/bitcoin-${BITCOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
  && curl -SLO "https://bitcoin.org/bin/bitcoin-core-${BITCOIN_VERSION}/SHA256SUMS.asc"
 
@@ -26,7 +26,7 @@ RUN ln -s /bitcoin /root/.bitcoin
 # Download armory
 RUN mkdir /armory
 WORKDIR /armory
-ENV ARMORY_VERSION 0.96
+ENV ARMORY_VERSION 0.96.5
 RUN curl -SLO "https://github.com/goatpig/BitcoinArmory/releases/download/v${ARMORY_VERSION}/armory_${ARMORY_VERSION}-gcc5.4_amd64.deb"
 RUN curl -SLO "https://github.com/goatpig/BitcoinArmory/releases/download/v${ARMORY_VERSION}/sha256sum.txt.asc"
 
