@@ -1,5 +1,5 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/jimmysong76/armory-vnc.svg)](https://hub.docker.com/r/jimmysong76/armory-vnc/)
-[![Docker Stars](https://img.shields.io/docker/stars/jimmysong76/armory-vnc.svg)](https://hub.docker.com/r/jimmysong76/armory-vnc/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/cryptosig/armory-vnc.svg)](https://hub.docker.com/r/cryptosig/armory-vnc/)
+[![Docker Stars](https://img.shields.io/docker/stars/cryptosig/armory-vnc.svg)](https://hub.docker.com/r/cryptosig/armory-vnc/)
 
 armory-vnc
 ===
@@ -8,8 +8,8 @@ Simple VNC-connectable docker container that uses:
  * Ubuntu Core 16.04
  * LXDE desktop
  * TightVNC server
- * Bitcoin 0.14.1
- * Armory 0.96
+ * Bitcoin 0.21.0
+ * Armory 0.96.5
 
 *YOU SHOULD STILL SIGN ON AN OFFLINE MACHINE, USE THIS ONLY FOR YOUR WATCH-ONLY WALLET!!*
 
