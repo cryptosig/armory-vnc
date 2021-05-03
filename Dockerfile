@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER cryptosig <http://github.com/cryptosig>
 
 # Install LXDE, VNC server, Twisted, SWIG and Qt
