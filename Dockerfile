@@ -27,7 +27,7 @@ RUN ln -s /bitcoin /root/.bitcoin
 RUN mkdir /armory
 WORKDIR /armory
 ENV ARMORY_VERSION 0.96.5
-RUN curl -SLO "https://github.com/goatpig/BitcoinArmory/releases/download/v${ARMORY_VERSION}/armory_${ARMORY_VERSION}-gcc5.4_amd64.deb"
+RUN curl -SLO "https://github.com/goatpig/BitcoinArmory/releases/download/v${ARMORY_VERSION}/armory_${ARMORY_VERSION}_amd64_gcc7.2.deb"
 RUN curl -SLO "https://github.com/goatpig/BitcoinArmory/releases/download/v${ARMORY_VERSION}/sha256sum.txt.asc"
 
 # Verify and install download
@@ -35,9 +35,9 @@ COPY goatpig-signing-key.asc /armory
 RUN gpg --import goatpig-signing-key.asc \
  && gpg --verify --trust-model=always sha256sum.txt.asc \
  && gpg --decrypt --output sha256sum.txt sha256sum.txt.asc \
- && grep "armory_${ARMORY_VERSION}-gcc5.4_amd64.deb" sha256sum.txt | sha256sum -c - \
- && dpkg -i "armory_${ARMORY_VERSION}-gcc5.4_amd64.deb" \
- && rm "armory_${ARMORY_VERSION}-gcc5.4_amd64.deb" sha256sum.txt.asc sha256sum.txt
+ && grep "armory_${ARMORY_VERSION}_amd64_gcc7.2.deb" sha256sum.txt | sha256sum -c - \
+ && dpkg -i "armory_${ARMORY_VERSION}_amd64_gcc7.2.deb" \
+ && rm "armory_${ARMORY_VERSION}_amd64_gcc7.2.deb" sha256sum.txt.asc sha256sum.txt
 
 RUN ln -s /armory /root/.armory
 
