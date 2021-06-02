@@ -50,6 +50,8 @@ RUN cat password.txt password.txt | vncpasswd \
 
 # Expose VNC port
 EXPOSE 5901
+# Expose BitcoinRPC
+EXPOSE 8332
 
 
 # Copy VNC script that handles restarts
