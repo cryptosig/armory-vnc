@@ -8,7 +8,7 @@ RUN apt-get update \
 # Download bitcoin
 RUN mkdir /bitcoin
 WORKDIR /bitcoin
-ENV BITCOIN_VERSION 0.21.0
+ENV BITCOIN_VERSION 27.0
 RUN curl -SLO "https://bitcoin.org/bin/bitcoin-core-${BITCOIN_VERSION}/bitcoin-${BITCOIN_VERSION}-x86_64-linux-gnu.tar.gz" \
  && curl -SLO "https://bitcoin.org/bin/bitcoin-core-${BITCOIN_VERSION}/SHA256SUMS.asc"
 
